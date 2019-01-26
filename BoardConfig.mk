@@ -55,6 +55,7 @@ TARGET_USES_64_BIT_BINDER := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3 loop.max_part=7
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -67,7 +68,7 @@ TARGET_KERNEL_CONFIG := oneplus2_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
+#BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
 
 # Audio
 AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
@@ -111,7 +112,7 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # Lineage Hardware
 JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(PLATFORM_PATH)/lineagehw|**/*.java
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap"
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(PLATFORM_PATH)/config.fs
@@ -126,10 +127,10 @@ TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_HWC2 := true
-
+USE_OPENGL_RENDERER := true
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
-
+HAVE_ADRENO_SOURCE := false
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
