@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 type awktool_exec, exec_type, file_type;
 
+=======
+>>>>>>> e42cbe1... oneplus2: Clean up obsolete sepolicy
 allow hal_bluetooth_default sysfs_bluetooth_writable:file write;
 allow hal_bluetooth_default bluetooth_data_file:file { append create getattr open read write };
 allow hal_bluetooth_default wcnss_filter:unix_stream_socket connectto;

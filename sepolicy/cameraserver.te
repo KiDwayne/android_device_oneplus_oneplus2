@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 allow cameraserver camera_data_file:dir search;
 =======
 allow cameraserver camera_data_file:dir search;
+=======
+>>>>>>> e42cbe1... oneplus2: Clean up obsolete sepolicy
 allow cameraserver sysfs_leds:dir search;
 allow cameraserver sysfs_leds:file rw_file_perms;
 allow cameraserver sysfs_leds:lnk_file read;
