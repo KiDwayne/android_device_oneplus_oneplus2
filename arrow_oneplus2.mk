@@ -22,9 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk
 $(call inherit-product, device/oneplus/oneplus2/device.mk)
 
 # Inherit some common aicp stuff.
-$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
-PRODUCT_NAME := aicp_oneplus2
+PRODUCT_NAME := arrow_oneplus2
 PRODUCT_DEVICE := oneplus2
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -44,6 +44,6 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 
 TARGET_VENDOR := oneplus
 
-# AICP Device Maintainers
+# ARROW Device Maintainers
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DEVICE_MAINTAINERS="Shubh@m Gopale (shubhindia)"
+    DEVICE_MAINTAINERS="Wayne (kid3991)"
